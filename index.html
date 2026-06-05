@@ -259,8 +259,11 @@ h2.title em{color:var(--azul);font-style:normal}
 
 /* ════════ FOOTER ════════ */
 .footer{background:var(--cinza-bg);color:var(--cinza-md);padding:56px 0 40px;border-top:1px solid var(--cinza-line)}
-.footer .container{display:grid;grid-template-columns:auto 1fr;gap:40px 56px;align-items:start}
-.footer .footer-left{display:flex;flex-direction:column;gap:20px}
+.footer .container{display:grid;grid-template-columns:auto 1fr;gap:40px 56px;align-items:stretch}
+.footer .footer-left{display:flex;flex-direction:column;justify-content:space-between}
+.footer .footer-left .logo{margin-bottom:0}
+.footer .addr-block{margin-top:32px;flex:1}
+.footer .addr-block .lines .cnpj{margin-top:28px}
 .footer .addr-block{display:flex;align-items:flex-start;gap:12px}
 .footer .addr-block svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .footer .addr-block .lines{font-size:14px;line-height:1.85}
