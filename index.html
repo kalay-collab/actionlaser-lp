@@ -258,14 +258,22 @@ h2.title em{color:var(--azul);font-style:normal}
 .cta-final p{font-size:18px;color:rgba(255,255,255,.85);margin-bottom:32px}
 
 /* ════════ FOOTER ════════ */
-.footer{background:#fff;color:var(--cinza-md);padding:48px 0;border-top:1px solid var(--cinza-line)}
-.footer .container{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
-.footer .addr-block{display:flex;align-items:flex-start;gap:12px;text-align:left}
-.footer .addr-block svg{width:20px;height:20px;flex-shrink:0;margin-top:2px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.footer .addr-block .lines{font-size:14px;line-height:1.7}
-.footer .addr-block .lines b{color:var(--cinza-txt)}
-.footer .addr-block .lines .cnpj{font-size:12.5px;color:var(--cinza-md);margin-top:6px}
-@media(max-width:640px){.footer .container{flex-direction:column;text-align:center}.footer .addr-block{text-align:left}}
+.footer{background:var(--cinza-bg);color:var(--cinza-md);padding:56px 0 40px;border-top:1px solid var(--cinza-line)}
+.footer .container{display:grid;grid-template-columns:auto 1fr auto;gap:48px;align-items:start;flex-wrap:wrap}
+.footer .addr-block{display:flex;align-items:flex-start;gap:12px}
+.footer .addr-block svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer .addr-block .lines{font-size:14px;line-height:1.85}
+.footer .addr-block .lines b{color:var(--cinza-txt);display:block}
+.footer .addr-block .lines .tel{display:flex;align-items:center;gap:6px;margin-top:4px;font-size:14px;color:var(--cinza-md)}
+.footer .addr-block .lines .tel svg{width:15px;height:15px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer .addr-block .lines .cnpj{font-size:12px;color:var(--cinza-md);margin-top:8px;opacity:.75}
+.footer .map{border-radius:10px;overflow:hidden;box-shadow:var(--shadow);flex-shrink:0}
+.footer .map iframe{display:block;border:0}
+@media(max-width:860px){
+  .footer .container{grid-template-columns:1fr;gap:32px}
+  .footer .map iframe{width:100%;height:200px}
+}
+@media(max-width:640px){.footer .addr-block{flex-direction:column}}
 .disclaimer{background:#fff;border-top:1px solid var(--cinza-line);padding:18px 0}
 .disclaimer p{font-size:11.5px;color:var(--cinza-md);text-align:center;line-height:1.6;opacity:.8}
 
@@ -289,7 +297,7 @@ h2.title em{color:var(--azul);font-style:normal}
     <a href="#" class="logo" aria-label="Action Laser Higienópolis">
       <img src="assets/logo.png" alt="Action Laser Higienópolis">
     </a>
-    <a href="#contato" class="btn-wa">
+    <a href="#" class="btn-wa" data-wa target="_blank" rel="noopener">
       <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.851L.057 23.272c-.078.312.203.593.515.515l5.421-1.472A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.045-1.4l-.361-.214-3.745 1.018.981-3.638-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
       <span>Falar no WhatsApp</span>
     </a>
@@ -304,7 +312,7 @@ h2.title em{color:var(--azul);font-style:normal}
     <h1>Você quer parar de fumar, mas<br><span class="hl">sozinho não consegue?</span></h1>
     <p class="sub">Há mais de 30 anos ajudamos as pessoas a largar o vício com acupuntura laser. Sem agulhas, sem sofrimento e com acompanhamento de 90 dias.</p>
     <div class="hero-actions">
-      <a href="#contato" class="btn-wa lg">
+      <a href="#" class="btn-wa lg" data-wa target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.851L.057 23.272c-.078.312.203.593.515.515l5.421-1.472A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.045-1.4l-.361-.214-3.745 1.018.981-3.638-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
         Falar com um especialista
       </a>
@@ -501,10 +509,23 @@ h2.title em{color:var(--azul);font-style:normal}
     <div class="addr-block">
       <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
       <div class="lines">
-        <b>Rua Mato Grosso, 306 · Cj. 507</b><br>
+        <b>Rua Mato Grosso, 306 · Cj. 507</b>
         Higienópolis, São Paulo · SP
+        <div class="tel">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
+          (11) 3255-9285
+        </div>
         <div class="cnpj">EL KALAY LTDA., CNPJ n.º 07.271.229/0001-00</div>
       </div>
+    </div>
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0!2d-46.6565!3d-23.5489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5799aaaaaaab%3A0x1!2sRua+Mato+Grosso%2C+306+-+Higienópolis%2C+São+Paulo+-+SP%2C+01239-040!5e0!3m2!1spt-BR!2sbr!4v1"
+        width="280" height="200"
+        style="border:0;display:block"
+        allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </footer>
@@ -517,10 +538,10 @@ h2.title em{color:var(--azul);font-style:normal}
 <script>
 /* ── WhatsApp: troque o número pelo real (DDI+DDD+número) ── */
 (function(){
-  var phone = '5511000000000';
+  var phone = '5511983899018';
   var msg = encodeURIComponent('Olá! Vim pela página da Action Laser Higienópolis e gostaria de falar com um especialista sobre parar de fumar.');
   var url = 'https://wa.me/'+phone+'?text='+msg;
-  document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = url; });
+  document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = url; a.target = '_blank'; a.rel = 'noopener'; });
 })();
 </script>
 </body>
