@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Action Laser Higienópolis — Pare de fumar com acupuntura a laser</title>
+<meta name="description" content="Acupuntura a laser para parar de fumar cigarro, vape e cannabis. Sem agulhas, sem dor, com acompanhamento de 90 dias. Atendimento com Berta El Kalay em Higienópolis, SP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════════
+   ACTION LASER HIGIENÓPOLIS — Landing Page v2
+   ───────────────────────────────────────────────────────
+   Azul Confiança  #1A6B8A  primária / acentos
+   Azul Escuro     #135570  hero / faixas
+   Azul Claro      #EBF4F8  fundos suaves
+   Branco          #FFFFFF
+   Cinza Névoa     #F2F4F6  fundo base
+   Cinza Texto     #1F2937  títulos
+   Cinza Médio     #6B7280  corpo
+   Verde WhatsApp  #25D366  botões de contato
+   Vermelho Action #CC1F1F  marca + títulos de seção
+   ═══════════════════════════════════════════════════════ */
+
+:root{
+  --azul:#1A6B8A; --azul-dark:#135570; --azul-deep:#0E4257;
+  --azul-lite:#EBF4F8; --azul-soft:#7EC8E3;
+  --branco:#FFFFFF; --cinza-bg:#F2F4F6;
+  --cinza-txt:#1F2937; --cinza-md:#6B7280; --cinza-line:#E5E7EB;
+  --verde:#25D366; --verde-dark:#1EBE5D;
+  --vermelho:#CC1F1F;
+  --shadow:0 4px 24px rgba(17,24,39,.07);
+  --shadow-lg:0 24px 64px rgba(17,24,39,.12);
+  --radius:12px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--cinza-txt);
+  background:var(--cinza-bg);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+
+.container{max-width:1080px;margin:0 auto;padding:0 24px}
+.section{padding:88px 0}
+.eyebrow{
+  font-size:13px;font-weight:700;color:var(--azul);
+  letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;
+}
+.eyebrow.red{color:var(--vermelho)}
+h2.title{
+  font-family:'Playfair Display',serif;
+  font-size:38px;font-weight:900;line-height:1.18;
+  color:var(--cinza-txt);margin-bottom:18px;
+}
+h2.title em{color:var(--azul);font-style:normal}
+.lead{font-size:17px;color:var(--cinza-md);max-width:640px}
+
+/* ── Botão WhatsApp (verde) ── */
+.btn-wa{
+  display:inline-flex;align-items:center;gap:10px;
+  background:var(--verde);color:#fff;
+  font-size:15px;font-weight:700;
+  padding:15px 28px;border-radius:9px;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  box-shadow:0 8px 20px rgba(37,211,102,.30);
+}
+.btn-wa:hover{background:var(--verde-dark);transform:translateY(-2px);box-shadow:0 12px 26px rgba(37,211,102,.40)}
+.btn-wa svg{width:18px;height:18px;fill:currentColor;flex-shrink:0}
+.btn-wa.lg{font-size:17px;padding:18px 36px}
+
+/* ════════ LOGO ════════ */
+.logo{display:inline-flex;align-items:center}
+.logo img{height:52px;width:auto;display:block}
+.header .logo img{height:50px}
+.footer .logo img{height:52px}
+
+/* ════════ HEADER ════════ */
+.header{
+  position:sticky;top:0;z-index:50;
+  background:var(--cinza-bg);
+  border-bottom:1px solid var(--cinza-line);
+}
+.header .container{display:flex;align-items:center;justify-content:space-between;height:74px}
+.header .btn-wa{padding:11px 20px;font-size:14px}
+@media(max-width:640px){.header .btn-wa span{display:none}.header .btn-wa{padding:11px 14px}}
+
+/* ════════ HERO ════════ */
+.hero{
+  background:linear-gradient(135deg,var(--azul) 0%,var(--azul-dark) 52%,var(--azul-deep) 100%);
+  color:#fff;position:relative;overflow:hidden;
+  padding:96px 0 104px;
+}
+.hero::before{content:'';position:absolute;top:-120px;right:-100px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(126,200,227,.16),transparent 70%);z-index:1}
+.hero::after{content:'';position:absolute;bottom:-160px;left:-80px;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.05),transparent 70%);z-index:1}
+.hero .hero-mesh{
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(126,200,227,.10) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(126,200,227,.10) 1px,transparent 1px);
+  background-size:46px 46px;
+  -webkit-mask-image:radial-gradient(circle at 80% 28%, #000, transparent 72%);
+          mask-image:radial-gradient(circle at 80% 28%, #000, transparent 72%);
+  filter:blur(.4px);
+}
+.hero .container{position:relative;z-index:2;max-width:820px}
+.hero .eyebrow{color:#FF5252}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:52px;font-weight:900;line-height:1.5;
+  margin-bottom:22px;letter-spacing:-.01em;color:#fff;
+}
+.hero h1 .hl{
+  background:#fff;color:var(--azul-dark);
+  padding:.06em .22em;border-radius:5px;
+  -webkit-box-decoration-break:clone;box-decoration-break:clone;
+}
+.hero p.sub{font-size:19px;color:rgba(255,255,255,.82);max-width:620px;margin-bottom:34px}
+.hero .hero-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero .btn-wa{background:#fff;color:var(--azul-dark);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.hero .btn-wa:hover{background:var(--azul-lite);color:var(--azul-dark)}
+@media(max-width:640px){.hero h1{font-size:36px}.hero p.sub{font-size:17px}}
+
+/* ════════ STRIP de chips ════════ */
+.strip{background:var(--azul-lite);padding:18px 0}
+.strip .container{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.strip .chip{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;color:var(--azul-dark);
+}
+.strip .chip svg{width:18px;height:18px;stroke:var(--verde);fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+
+/* ════════ PROBLEMA ════════ */
+.problema{background:var(--cinza-bg)}
+.problema .grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.problema .ptext p{font-size:16px;color:var(--cinza-md);margin-top:16px}
+.problema .pcard{
+  background:#fff;border-radius:var(--radius);
+  padding:34px;border-left:4px solid var(--vermelho);box-shadow:var(--shadow);
+}
+.problema .pcard h3{font-size:19px;margin-bottom:18px;color:var(--cinza-txt)}
+.problema .pcard ul{list-style:none;display:flex;flex-direction:column;gap:14px}
+.problema .pcard li{display:flex;gap:12px;font-size:15px;color:var(--cinza-md);align-items:flex-start}
+.problema .pcard li .warn{
+  width:22px;height:22px;flex-shrink:0;margin-top:1px;
+  background:var(--vermelho);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:800;font-size:14px;line-height:1;
+}
+@media(max-width:820px){.problema .grid{grid-template-columns:1fr;gap:32px}}
+
+/* ════════ SOLUÇÃO ════════ */
+.solucao{background:var(--branco)}
+.solucao .head{max-width:980px;margin:0 auto 56px;text-align:center}
+.solucao .head .lead{text-align:center;margin:0 auto;font-size:17px;max-width:980px}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.pillar{
+  background:#fff;border:1px solid var(--cinza-line);border-radius:var(--radius);padding:34px 28px;
+  box-shadow:var(--shadow);transition:transform .2s ease, box-shadow .2s ease;
+}
+.pillar:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.pillar .ico{
+  width:54px;height:54px;border-radius:14px;
+  background:var(--azul-lite);display:flex;align-items:center;justify-content:center;margin-bottom:20px;
+}
+.pillar .ico svg{width:26px;height:26px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.pillar h3{font-size:19px;margin-bottom:10px}
+.pillar p{font-size:15px;color:var(--cinza-md)}
+
+.solucao .how-title{
+  text-align:center;font-family:'Playfair Display',serif;
+  font-size:26px;font-weight:800;color:var(--cinza-txt);
+  margin:48px 0 22px;
+}
+.solucao .how{
+  background:var(--cinza-bg);border-radius:var(--radius);
+  padding:36px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:28px;position:relative;
+}
+.solucao .step{display:flex;flex-direction:column;gap:10px}
+.solucao .step .num{
+  width:36px;height:36px;border-radius:50%;background:var(--azul);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:16px;
+}
+.solucao .step h4{font-size:16px}
+.solucao .step p{font-size:14px;color:var(--cinza-md)}
+@media(max-width:820px){.pillars{grid-template-columns:1fr}.solucao .how{grid-template-columns:1fr;gap:22px}}
+
+/* ════════ PARA QUEM ════════ */
+.paraquem{background:var(--cinza-bg)}
+.paraquem .grid{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
+.paraquem .photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:4/5;background:var(--azul-lite)}
+.paraquem .photo img{width:100%;height:100%;object-fit:cover}
+.checklist{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:8px}
+.checklist li{display:flex;gap:14px;align-items:flex-start;font-size:16px;color:var(--cinza-txt)}
+.checklist li .check{
+  width:26px;height:26px;border-radius:50%;background:var(--verde);flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;margin-top:1px;
+}
+.checklist li .check svg{width:13px;height:13px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:820px){.paraquem .grid{grid-template-columns:1fr;gap:32px}.paraquem .photo{aspect-ratio:16/10;max-height:360px}}
+
+/* ════════ NÚMEROS ════════ */
+.numeros{background:var(--azul-dark);color:#fff;position:relative;overflow:hidden}
+.numeros::before{content:'';position:absolute;top:-100px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(126,200,227,.12),transparent 70%)}
+.numeros .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative;z-index:1}
+.numeros .stat{text-align:center}
+.numeros .stat strong{display:block;font-family:'Playfair Display',serif;font-size:46px;font-weight:900;color:#fff;line-height:1}
+.numeros .stat span{display:block;margin-top:10px;font-size:14px;color:rgba(255,255,255,.7)}
+@media(max-width:820px){.numeros .grid{grid-template-columns:1fr;gap:36px}}
+
+/* ════════ DEPOIMENTOS (3 colunas) ════════ */
+.depos{background:var(--cinza-bg)}
+.depos .head{text-align:center;margin-bottom:44px}
+.depo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.depo-card{
+  background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:32px 28px;display:flex;flex-direction:column;
+}
+.depo-card .stars{color:var(--azul);font-size:18px;letter-spacing:3px;margin-bottom:16px}
+.depo-card blockquote{
+  font-family:'Playfair Display',serif;font-size:18px;font-weight:700;
+  line-height:1.55;color:var(--cinza-txt);margin:0 0 20px;
+}
+.depo-card .author{margin-top:auto;font-size:14px;color:var(--azul);font-weight:700}
+@media(max-width:820px){.depo-grid{grid-template-columns:1fr;max-width:540px;margin:0 auto}}
+
+/* ════════ SOBRE BERTA ════════ */
+.berta{background:var(--branco)}
+.berta .grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
+.berta .photo{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:1/1;background:var(--azul-lite)}
+.berta .photo img{width:100%;height:100%;object-fit:cover}
+.berta h2 em{color:var(--azul)}
+.berta p{font-size:16px;color:var(--cinza-md);margin-top:16px}
+.berta .cred{
+  margin-top:24px;display:inline-flex;align-items:center;gap:12px;
+  background:var(--cinza-bg);border-radius:10px;padding:14px 20px;
+}
+.berta .cred .av{width:46px;height:46px;border-radius:50%;background:var(--azul);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Playfair Display',serif;font-size:18px}
+.berta .cred .info b{display:block;font-size:15px}
+.berta .cred .info span{font-size:13px;color:var(--cinza-md)}
+@media(max-width:820px){.berta .grid{grid-template-columns:1fr;gap:32px}.berta .photo{max-width:320px}}
+
+/* ════════ CTA FINAL ════════ */
+.cta-final{
+  background:linear-gradient(135deg,var(--azul) 0%,var(--azul-dark) 100%);
+  color:#fff;position:relative;overflow:hidden;
+}
+.cta-final::before{content:'';position:absolute;top:-100px;left:-60px;width:340px;height:340px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.06),transparent 70%)}
+.cta-final .inner{text-align:center;max-width:680px;margin:0 auto;position:relative;z-index:1}
+.cta-final h2{font-family:'Playfair Display',serif;font-size:40px;font-weight:900;margin-bottom:16px}
+.cta-final p{font-size:18px;color:rgba(255,255,255,.85);margin-bottom:32px}
+
+/* ════════ FOOTER ════════ */
+.footer{background:#fff;color:var(--cinza-md);padding:48px 0;border-top:1px solid var(--cinza-line)}
+.footer .container{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.footer .addr-block{display:flex;align-items:flex-start;gap:12px;text-align:left}
+.footer .addr-block svg{width:20px;height:20px;flex-shrink:0;margin-top:2px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer .addr-block .lines{font-size:14px;line-height:1.7}
+.footer .addr-block .lines b{color:var(--cinza-txt)}
+.footer .addr-block .lines .cnpj{font-size:12.5px;color:var(--cinza-md);margin-top:6px}
+@media(max-width:640px){.footer .container{flex-direction:column;text-align:center}.footer .addr-block{text-align:left}}
+.disclaimer{background:#fff;border-top:1px solid var(--cinza-line);padding:18px 0}
+.disclaimer p{font-size:11.5px;color:var(--cinza-md);text-align:center;line-height:1.6;opacity:.8}
+
+/* ════════ AJUSTES MOBILE ════════ */
+@media(max-width:640px){
+  .section{padding:56px 0}
+  h2.title{font-size:29px}
+  .hero{padding:64px 0 72px}
+  .cta-final h2{font-size:31px}
+  .numeros .stat strong{font-size:40px}
+  .solucao .how-title{font-size:23px}
+  .slide-none{}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo" aria-label="Action Laser Higienópolis">
+      <img src="assets/logo.png" alt="Action Laser Higienópolis">
+    </a>
+    <a href="#contato" class="btn-wa">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.851L.057 23.272c-.078.312.203.593.515.515l5.421-1.472A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.045-1.4l-.361-.214-3.745 1.018.981-3.638-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+      <span>Falar no WhatsApp</span>
+    </a>
+  </div>
+</header>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-mesh"></div>
+  <div class="container">
+    <p class="eyebrow">Cigarro · Vape · Cannabis</p>
+    <h1>Você quer parar de fumar, mas<br><span class="hl">sozinho não consegue?</span></h1>
+    <p class="sub">Há mais de 30 anos ajudamos as pessoas a largar o vício com acupuntura laser. Sem agulhas, sem sofrimento e com acompanhamento de 90 dias.</p>
+    <div class="hero-actions">
+      <a href="#contato" class="btn-wa lg">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.851L.057 23.272c-.078.312.203.593.515.515l5.421-1.472A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.045-1.4l-.361-.214-3.745 1.018.981-3.638-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        Falar com um especialista
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ STRIP ═══════════ -->
+<div class="strip">
+  <div class="container">
+    <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Sem agulhas, sem dor</span>
+    <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Sessão única na maioria dos casos</span>
+    <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 90 dias de acompanhamento</span>
+    <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> 75% de taxa de sucesso</span>
+  </div>
+</div>
+
+<!-- ═══════════ PROBLEMA ═══════════ -->
+<section class="section problema">
+  <div class="container">
+    <div class="grid">
+      <div class="ptext">
+        <p class="eyebrow red">Por que é tão difícil?</p>
+        <h2 class="title">Falhar ao parar sozinho não é <em>falta de força de vontade</em>.</h2>
+        <p>A nicotina e os outros componentes do tabaco criam uma dependência química real. Quando você tenta parar, o cérebro entra em abstinência e o corpo resiste, mesmo quando a vontade existe.</p>
+        <p>O vape e a cannabis têm seus próprios mecanismos de dependência. E a ideia de que "fazem menos mal" só torna a decisão de parar ainda mais difícil.</p>
+      </div>
+      <div class="pcard">
+        <h3>Você reconhece algum destes sinais?</h3>
+        <ul>
+          <li><span class="warn">!</span> Já tentou parar ou diminuir e voltou</li>
+          <li><span class="warn">!</span> Sente ansiedade e irritação quando fica sem fumar</li>
+          <li><span class="warn">!</span> Acende o próximo cigarro quase no automático</li>
+          <li><span class="warn">!</span> Tem medo de engordar ou ficar de mau humor ao parar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SOLUÇÃO ═══════════ -->
+<section class="section solucao">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow red">A solução</p>
+      <h2 class="title">Acupuntura a laser: tudo o que faltava para a sua virada!</h2>
+      <p class="lead">Um laser frio de baixa potência, sem agulhas e sem dor, é aplicado em pontos específicos de acupuntura. O estímulo faz seu sistema nervoso liberar serotonina, dopamina e endorfina: os mesmos neurotransmissores do prazer que o cigarro simulava artificialmente. Resultado: a compulsão diminui e a ansiedade é reduzida, proporcionando tranquilidade durante todo o processo.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 2.5 1.5 4 2.5 5.5.5.75.5 1.5.5 2.5h8c0-1 0-1.75.5-2.5C17.5 13 19 11.5 19 9a7 7 0 00-7-7z"/><line x1="9" y1="21" x2="15" y2="21"/></svg></div>
+        <h3>Sem dor</h3>
+        <p>Laser frio, sem agulhas e sem desconforto. Você sente apenas relaxamento e bem-estar durante a aplicação.</p>
+      </div>
+      <div class="pillar">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg></div>
+        <h3>Sessão única</h3>
+        <p>Na maioria dos casos, uma única sessão já é suficiente para interromper a compulsão pelo fumo.</p>
+      </div>
+      <div class="pillar">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <h3>Acompanhamento de 90 dias</h3>
+        <p>Reforços gratuitos durante 3 meses, sempre que você precisar de apoio para se manter firme.</p>
+      </div>
+    </div>
+
+    <h3 class="how-title">Como funciona?</h3>
+    <div class="how">
+      <div class="step">
+        <span class="num">1</span>
+        <h4>Conversa inicial</h4>
+        <p>Você fala com a terapeuta, conta seu histórico, tira dúvidas e entende como o tratamento funciona para o seu caso.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h4>Aplicação do laser</h4>
+        <p>É realizado o estímulo indolor nos pontos de acupuntura da orelha, mãos, rosto e corpo. Sem agulhas, em poucos minutos.</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h4>Acompanhamento</h4>
+        <p>Você recebe orientações sobre os próximos passos e todo o suporte necessário, durante 3 meses, caso haja algum desconforto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PARA QUEM ═══════════ -->
+<section class="section paraquem">
+  <div class="container">
+    <div class="grid">
+      <div class="photo">
+        <img src="assets/paraquem.jpg" alt="Berta El Kalay aplicando acupuntura a laser">
+      </div>
+      <div>
+        <p class="eyebrow red">Para quem é</p>
+        <h2 class="title">O tratamento é para você que:</h2>
+        <ul class="checklist">
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Já tentou parar de fumar mais de uma vez e não conseguiu</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Fuma cigarro, vape ou cannabis e quer se libertar de vez</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Sente ansiedade forte sempre que tenta parar</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Quer parar sem remédios, adesivos ou efeitos colaterais</li>
+          <li><span class="check"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></span> Busca uma solução rápida, segura e natural</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ NÚMEROS ═══════════ -->
+<section class="section numeros">
+  <div class="container">
+    <div class="grid">
+      <div class="stat"><strong>75%</strong><span>de taxa de sucesso<br>nos tratamentos</span></div>
+      <div class="stat"><strong>+30</strong><span>anos de metodologia<br>comprovada no mundo</span></div>
+      <div class="stat"><strong>+3.000</strong><span>pacientes já<br>atendidos na unidade</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DEPOIMENTOS (carrossel) ═══════════ -->
+<section class="section depos">
+  <div class="container">
+    <div class="head">
+      <p class="eyebrow red">O que falam sobre a clínica</p>
+      <h2 class="title">Histórias de quem se libertou</h2>
+    </div>
+    <div class="depo-grid">
+      <div class="depo-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>Gostaria de aproveitar essa oportunidade para mais uma vez agradecer pelo bem que você e essa técnica me fizeram, pois já há 15 anos que parei de fumar e nem lembro que o cigarro existe. Um grande abraço e muitas felicidades para você.</blockquote>
+        <div class="author">— Vicente Sodré</div>
+      </div>
+      <div class="depo-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>Fumei durante 50 anos e parei com uma única aplicação do laser, feita pela Dra. Berta. Não sofri e nem lembro que um dia fumei. Meu filho foi igual: parou e nunca mais fumou. Obrigada!</blockquote>
+        <div class="author">— Ligia Engracia</div>
+      </div>
+      <div class="depo-card">
+        <div class="stars">★★★★★</div>
+        <blockquote>Fui fumante por 35 anos e achava que nunca ia conseguir abandonar este terrível vício. Procurei a Action Laser sem esperança e, desde o primeiro atendimento, nunca mais fumei. Hoje estou com 3 meses e 18 dias sem tabaco. É muita alegria e felicidade! Minha vida mudou demais!</blockquote>
+        <div class="author">— Maria S. Ribeiro</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SOBRE BERTA ═══════════ -->
+<section class="section berta">
+  <div class="container">
+    <div class="grid">
+      <div class="photo">
+        <img src="assets/berta.jpg" alt="Berta El Kalay — Action Laser Higienópolis">
+      </div>
+      <div>
+        <p class="eyebrow red">Quem cuida de você</p>
+        <h2 class="title">Atendimento com<br><em>Berta El Kalay</em></h2>
+        <p>Berta é psicóloga, acupunturista e ex-fumante, graças à metodologia exclusiva da Action Laser.</p>
+        <p>Foi por entender na pele o que significa querer parar e não conseguir que ela dedicou sua carreira a ajudar outras pessoas nessa jornada também.</p>
+        <p>Desde junho de 1994, a Action Laser Higienópolis já atendeu milhares de pacientes, sempre em um ambiente acolhedor, com ética, respeito e profissionalismo.</p>
+        <div class="cred">
+          <div class="av">BK</div>
+          <div class="info">
+            <b>Berta El Kalay</b>
+            <span>Psicóloga e Acupunturista · Action Laser Higienópolis</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section class="section cta-final" id="contato">
+  <div class="container">
+    <div class="inner">
+      <h2>Dê o primeiro passo hoje</h2>
+      <p>Uma conversa sem compromisso pode mudar a sua vida. Fale agora com a equipe da Action Laser Higienópolis e tire todas as suas dúvidas.</p>
+      <a href="#" class="btn-wa lg" data-wa>
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.851L.057 23.272c-.078.312.203.593.515.515l5.421-1.472A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.045-1.4l-.361-.214-3.745 1.018.981-3.638-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+        Quero falar com um especialista
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <a href="#" class="logo">
+      <img src="assets/logo.png" alt="Action Laser Higienópolis">
+    </a>
+    <div class="addr-block">
+      <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="lines">
+        <b>Rua Mato Grosso, 306 · Cj. 507</b><br>
+        Higienópolis, São Paulo · SP
+        <div class="cnpj">EL KALAY LTDA., CNPJ n.º 07.271.229/0001-00</div>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="disclaimer">
+  <div class="container">
+    <p>Os resultados podem variar de pessoa para pessoa. A acupuntura a laser é uma terapia complementar e não substitui acompanhamento médico.<br>© Action Laser Higienópolis — Todos os direitos reservados.</p>
+  </div>
+</div>
+
+<script>
+/* ── WhatsApp: troque o número pelo real (DDI+DDD+número) ── */
+(function(){
+  var phone = '5511000000000';
+  var msg = encodeURIComponent('Olá! Vim pela página da Action Laser Higienópolis e gostaria de falar com um especialista sobre parar de fumar.');
+  var url = 'https://wa.me/'+phone+'?text='+msg;
+  document.querySelectorAll('[data-wa]').forEach(function(a){ a.href = url; });
+})();
+</script>
+</body>
+</html>
