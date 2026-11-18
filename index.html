@@ -285,8 +285,10 @@ h2.title em{color:var(--azul);font-style:normal}
 .footer .addr-block svg{width:20px;height:20px;flex-shrink:0;margin-top:3px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 .footer .addr-block .lines{font-size:14px;line-height:1.85}
 .footer .addr-block .lines b{color:var(--cinza-txt);display:block}
-.footer .addr-block .lines .tel{display:flex;align-items:center;gap:6px;margin-top:4px;font-size:14px;color:var(--cinza-md)}
-.footer .addr-block .lines .tel svg{width:15px;height:15px;stroke:var(--azul);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.footer .addr-block .lines .tel{display:flex;width:fit-content;align-items:center;gap:7px;margin-top:4px;font-size:14px;color:var(--cinza-md);text-decoration:none;transition:color .2s}
+.footer .addr-block .lines .tel:hover{color:var(--verde-dark)}
+.footer .addr-block .lines .tel svg{width:15px;height:15px;fill:var(--verde);stroke:none;transition:fill .2s}
+.footer .addr-block .lines .tel:hover svg{fill:var(--verde-dark)}
 .footer .addr-block .lines .cnpj{font-size:12px;color:var(--cinza-md);margin-top:8px;opacity:.75}
 .footer .map{border-radius:10px;overflow:hidden;box-shadow:var(--shadow);flex-shrink:0}
 .footer .map iframe{display:block;border:0}
@@ -535,10 +537,10 @@ h2.title em{color:var(--azul);font-style:normal}
         <div class="lines">
           <b>Rua Dr. Veiga Filho, 350 · Consultório 701</b>
           Higienópolis, São Paulo · SP
-          <div class="tel">
-            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z"/></svg>
-            (11) 3255-9285
-          </div>
+          <a href="#" class="tel" data-wa aria-label="Falar no WhatsApp pelo número (11) 98389-9018">
+            <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.121 1.529 5.851L.057 23.272c-.078.312.203.593.515.515l5.421-1.472A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.045-1.4l-.361-.214-3.745 1.018.981-3.638-.235-.374A9.818 9.818 0 1112 21.818z"/></svg>
+            (11) 98389-9018
+          </a>
           <div class="cnpj">EL KALAY LTDA., CNPJ n.º 07.271.229/0001-00</div>
         </div>
       </div>
